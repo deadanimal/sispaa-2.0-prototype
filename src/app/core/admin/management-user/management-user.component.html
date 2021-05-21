@@ -101,25 +101,36 @@
                                 <span>User ID</span>
                             </ng-template>
                             <ng-template let-row="row" ngx-datatable-cell-template>
-                                {{row.user_id}}
+                                {{row.age}}
                             </ng-template>
                         </ngx-datatable-column>
-                        <ngx-datatable-column name="Name"></ngx-datatable-column>
-                        <ngx-datatable-column name="Email"></ngx-datatable-column>
+                        <ngx-datatable-column name="name">
+                            <ng-template ngx-datatable-header-template>
+                                <span>Nama</span>
+                              </ng-template>
+                        </ngx-datatable-column>
+                        <ngx-datatable-column name="office">
+                            <ng-template ngx-datatable-header-template>
+                                <span>Email</span>
+                              </ng-template>
+                        </ngx-datatable-column>
                         <ngx-datatable-column>
                             <ng-template ngx-datatable-header-template>
-                                <span>Joined At</span>
+                                <span>Cipta pada</span>
                             </ng-template>
                             <ng-template let-row="row" ngx-datatable-cell-template>
-                                {{row.joined_at}}
+                                {{row.start}}
                             </ng-template>
                         </ngx-datatable-column>
                         <ngx-datatable-column>
                             <ng-template ngx-datatable-header-template>
-                                <span>User Type</span>
+                                <span>Jenis pengguna</span>
                             </ng-template>
                             <ng-template let-row="row" ngx-datatable-cell-template>
-                                {{row.user_type}}
+                                <span *ngIf="row.status == '1'">Staff</span>
+                                <span *ngIf="row.status == '2'">Admin</span>
+                                <span *ngIf="row.status == '3'">Pegawai</span>
+                                <span *ngIf="row.status == '4'">Staff</span>
                             </ng-template>
                         </ngx-datatable-column>
                         <ngx-datatable-column>
@@ -127,8 +138,10 @@
                                 <span>Status</span>
                             </ng-template>
                             <ng-template let-row="row" ngx-datatable-cell-template>
-                                <span *ngIf="row.is_active == 'Active'" class="badge badge-pill badge-success">Active</span>
-                                <span *ngIf="row.is_active == 'Inactive'" class="badge badge-pill badge-warning">Inactive</span>
+                                <span *ngIf="row.status == '1'" class="badge badge-pill badge-success">Active</span>
+                                <span *ngIf="row.status == '2'" class="badge badge-pill badge-warning">Inactive</span>
+                                <span *ngIf="row.status == '3'" class="badge badge-pill badge-success">Active</span>
+                                <span *ngIf="row.status == '4'" class="badge badge-pill badge-warning">Inactive</span>
                             </ng-template>
                         </ngx-datatable-column>
                     </ngx-datatable>

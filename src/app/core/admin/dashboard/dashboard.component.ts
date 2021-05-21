@@ -168,51 +168,51 @@ export class DashboardComponent implements OnInit, OnDestroy, AfterViewInit {
     // Add data
     chart.data = [
       {
-        country: "USA",
+        country: "Januari",
         visits: 3025,
       },
       {
-        country: "China",
+        country: "Februari",
         visits: 1882,
       },
       {
-        country: "Japan",
+        country: "Mac",
         visits: 1809,
       },
       {
-        country: "Germany",
+        country: "April",
         visits: 1322,
       },
       {
-        country: "UK",
+        country: "May",
         visits: 1122,
       },
       {
-        country: "France",
+        country: "Jun",
         visits: 1114,
       },
       {
-        country: "India",
+        country: "Julai",
         visits: 984,
       },
       {
-        country: "Spain",
+        country: "Ogos",
         visits: 711,
       },
       {
-        country: "Netherlands",
+        country: "September",
         visits: 665,
       },
       {
-        country: "Russia",
+        country: "Oktober",
         visits: 580,
       },
       {
-        country: "South Korea",
+        country: "November",
         visits: 443,
       },
       {
-        country: "Canada",
+        country: "Disember",
         visits: 441,
       },
     ];
